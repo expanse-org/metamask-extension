@@ -358,7 +358,9 @@ export function setTransactionToConfirm (transactionId) {
 
         try {
           const tokenSymbolData = await getSymbolAndDecimals(tokenAddress, existingTokens) || {}
-          const { symbol: tokenSymbol = '', decimals: tokenDecimals = '' } = tokenSymbolData
+          const { symbol, decimals } = tokenSymbolData
+          const tokenSymbol = symbol || ''
+          const tokenDecimals = decimals || '0'
           dispatch(updateTokenProps({ tokenSymbol, tokenDecimals }))
         } catch (error) {
           dispatch(updateTokenProps({ tokenSymbol: '', tokenDecimals: '' }))
