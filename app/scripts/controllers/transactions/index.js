@@ -284,7 +284,7 @@ class TransactionController extends EventEmitter {
   async signTransaction (txId) {
     const txMeta = this.txStateManager.getTx(txId)
     // add network/chain id
-    const chainId = this.getChainId()
+    const chainId = 2
     const txParams = Object.assign({}, txMeta.txParams, { chainId })
     // sign tx
     const fromAddress = txParams.from
