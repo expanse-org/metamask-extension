@@ -232,6 +232,20 @@ module.exports = class AppBar extends Component {
       },
     }, [
       h(DropdownMenuItem, {
+        key: 'expanse',
+        closeMenu: () => this.setState({ isNetworkMenuOpen: !isOpen }),
+        onClick: () => dispatch(actions.setProviderType('expanse')),
+        style: {
+          fontSize: '18px',
+        },
+      }, [
+        h('.menu-icon.diamond'),
+        'Expanse Network',
+        providerType === 'mainnet'
+          ? h('.check', '✓')
+          : null,
+      ]),
+      h(DropdownMenuItem, {
         key: 'main',
         closeMenu: () => this.setState({ isNetworkMenuOpen: !isOpen }),
         onClick: () => dispatch(actions.setProviderType('mainnet')),
@@ -246,44 +260,16 @@ module.exports = class AppBar extends Component {
           : null,
       ]),
       h(DropdownMenuItem, {
-        key: 'ropsten',
+        key: 'classic',
         closeMenu: () => this.setState({ isNetworkMenuOpen: !isOpen }),
-        onClick: () => dispatch(actions.setProviderType('ropsten')),
-        style: {
-          fontSize: '18px',
-        },
-      }, [
-        h('.menu-icon.red-dot'),
-        'Ropsten Test Network',
-        providerType === 'ropsten'
-          ? h('.check', '✓')
-          : null,
-      ]),
-      h(DropdownMenuItem, {
-        key: 'kovan',
-        closeMenu: () => this.setState({ isNetworkMenuOpen: !isOpen }),
-        onClick: () => dispatch(actions.setProviderType('kovan')),
-        style: {
-          fontSize: '18px',
-        },
-      }, [
-        h('.menu-icon.hollow-diamond'),
-        'Kovan Test Network',
-        providerType === 'kovan'
-          ? h('.check', '✓')
-          : null,
-      ]),
-      h(DropdownMenuItem, {
-        key: 'rinkeby',
-        closeMenu: () => this.setState({ isNetworkMenuOpen: !isOpen }),
-        onClick: () => dispatch(actions.setProviderType('rinkeby')),
+        onClick: () => dispatch(actions.setProviderType('classic')),
         style: {
           fontSize: '18px',
         },
       }, [
         h('.menu-icon.golden-square'),
-        'Rinkeby Test Network',
-        providerType === 'rinkeby'
+        'Ethereum Classic Network',
+        providerType === 'classic'
           ? h('.check', '✓')
           : null,
       ]),
@@ -296,7 +282,7 @@ module.exports = class AppBar extends Component {
         },
       }, [
         h('i.fa.fa-question-circle.fa-lg.menu-icon'),
-        'Localhost 8545',
+        'Localhost 9656',
         activeNetwork === LOCALHOST_RPC_URL
           ? h('.check', '✓')
           : null,

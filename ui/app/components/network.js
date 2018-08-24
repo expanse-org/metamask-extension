@@ -63,6 +63,12 @@ Network.prototype.render = function () {
   } else if (providerName === 'rinkeby') {
     hoverText = context.t('rinkeby')
     iconName = 'rinkeby-test-network'
+  } else if (providerName === 'expanse') {
+    hoverText = context.t('expanse')
+    iconName = 'expanse-network'
+  } else if (providerName === 'classic') {
+    hoverText = context.t('classic')
+    iconName = 'ethereum-classic-network'
   } else {
     hoverText = context.t('unknownNetwork')
     iconName = 'unknown-private-network'

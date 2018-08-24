@@ -298,6 +298,10 @@ App.prototype.getNetworkName = function () {
     name = 'Kovan Test Network'
   } else if (providerName === 'rinkeby') {
     name = 'Rinkeby Test Network'
+  } else if (providerName === 'expanse') {
+    name = 'Expanse Network'
+  } else if (providerName === 'classic') {
+    name = 'Ethereum Classic Network'
   } else {
     name = 'Unknown Private Network'
   }

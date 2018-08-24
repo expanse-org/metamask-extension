@@ -14,6 +14,16 @@ const RINKEBY_DISPLAY_NAME = 'Rinkeby'
 const KOVAN_DISPLAY_NAME = 'Kovan'
 const MAINNET_DISPLAY_NAME = 'Main Ethereum Network'
 
+//EXP
+const EXPANSE = 'expanse'
+const EXPANSE_CODE = 2
+const EXPANSE_DISPLAY_NAME = 'Expanse'
+
+//ETC
+const CLASSIC = 'classic'
+const CLASSIC_CODE = 61
+const CLASSIC_DISPLAY_NAME = 'Ethereum Classic'
+
 module.exports = {
   ROPSTEN,
   RINKEBY,
@@ -28,4 +38,10 @@ module.exports = {
   RINKEBY_DISPLAY_NAME,
   KOVAN_DISPLAY_NAME,
   MAINNET_DISPLAY_NAME,
+  EXPANSE,
+  EXPANSE_CODE,
+  EXPANSE_DISPLAY_NAME,
+  CLASSIC,
+  CLASSIC_CODE,
+  CLASSIC_DISPLAY_NAME,
 }

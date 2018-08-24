@@ -40,6 +40,12 @@ Network.prototype.render = function () {
       }),
       h('i.fa.fa-caret-down'),
     ])
+  } else if (providerName === 'expanse') {
+    hoverText = 'Expanse Network'
+    iconName = 'expanse-network'
+  } else if (providerName === 'classic') {
+    hoverText = 'Ethereum Classic Network'
+    iconName = 'ethereum-classic-network'
   } else if (providerName === 'mainnet') {
     hoverText = 'Main Ethereum Network'
     iconName = 'ethereum-network'
@@ -102,10 +108,33 @@ Network.prototype.render = function () {
             return h('.network-indicator', [
               h('.menu-icon.golden-square'),
               h('.network-name', {
-                style: {
-                  color: '#e7a218',
-                }},
-              'Rinkeby Test Net'),
+                  style: {
+                    color: '#e7a218',
+                  }
+                },
+                'Rinkeby Test Net'),
+              props.onClick && h('i.fa.fa-caret-down.fa-lg'),
+            ])
+          case 'expanse-network':
+            return h('.network-indicator', [
+              h('.menu-icon.golden-square'),
+              h('.network-name', {
+                  style: {
+                    color: '#ff9900',
+                  }
+                },
+                'Expanse Network'),
+              props.onClick && h('i.fa.fa-caret-down.fa-lg'),
+            ])
+          case 'ethereum-classic-network':
+            return h('.network-indicator', [
+              h('.menu-icon.diamond'),
+              h('.network-name', {
+                  style: {
+                    color: '#267f00',
+                  }
+                },
+                'Ethereum Classic Network'),
               props.onClick && h('i.fa.fa-caret-down.fa-lg'),
             ])
           default:

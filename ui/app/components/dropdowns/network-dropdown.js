@@ -115,6 +115,28 @@ NetworkDropdown.prototype.render = function () {
     h(
       DropdownMenuItem,
       {
+        key: 'expanse',
+        closeMenu: () => this.props.hideNetworkDropdown(),
+        onClick: () => props.setProviderType('expanse'),
+        style: dropdownMenuItemStyle,
+      },
+      [
+        providerType === 'expanse' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
+        h(NetworkDropdownIcon, {
+          backgroundColor: '#FF9900', // orange
+          isSelected: providerType === 'expanse',
+        }),
+        h('span.network-name-item', {
+          style: {
+            color: providerType === 'expanse' ? '#ffffff' : '#9b9b9b',
+          },
+        }, this.context.t('expanse')),
+      ]
+    ),
+
+    h(
+      DropdownMenuItem,
+      {
         key: 'main',
         closeMenu: () => this.props.hideNetworkDropdown(),
         onClick: () => props.setProviderType('mainnet'),
@@ -137,66 +159,22 @@ NetworkDropdown.prototype.render = function () {
     h(
       DropdownMenuItem,
       {
-        key: 'ropsten',
+        key: 'classic',
         closeMenu: () => this.props.hideNetworkDropdown(),
-        onClick: () => props.setProviderType('ropsten'),
+        onClick: () => props.setProviderType('classic'),
         style: dropdownMenuItemStyle,
       },
       [
-        providerType === 'ropsten' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
+        providerType === 'classic' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
         h(NetworkDropdownIcon, {
-          backgroundColor: '#ff4a8d', // $wild-strawberry
-          isSelected: providerType === 'ropsten',
+          backgroundColor: '#228B22', // forest green
+          isSelected: providerType === 'classic',
         }),
         h('span.network-name-item', {
           style: {
-            color: providerType === 'ropsten' ? '#ffffff' : '#9b9b9b',
+            color: providerType === 'classic' ? '#ffffff' : '#9b9b9b',
           },
-        }, this.context.t('ropsten')),
-      ]
-    ),
-
-    h(
-      DropdownMenuItem,
-      {
-        key: 'kovan',
-        closeMenu: () => this.props.hideNetworkDropdown(),
-        onClick: () => props.setProviderType('kovan'),
-        style: dropdownMenuItemStyle,
-      },
-      [
-        providerType === 'kovan' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
-        h(NetworkDropdownIcon, {
-          backgroundColor: '#7057ff', // $cornflower-blue
-          isSelected: providerType === 'kovan',
-        }),
-        h('span.network-name-item', {
-          style: {
-            color: providerType === 'kovan' ? '#ffffff' : '#9b9b9b',
-          },
-        }, this.context.t('kovan')),
-      ]
-    ),
-
-    h(
-      DropdownMenuItem,
-      {
-        key: 'rinkeby',
-        closeMenu: () => this.props.hideNetworkDropdown(),
-        onClick: () => props.setProviderType('rinkeby'),
-        style: dropdownMenuItemStyle,
-      },
-      [
-        providerType === 'rinkeby' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
-        h(NetworkDropdownIcon, {
-          backgroundColor: '#f6c343', // $saffron
-          isSelected: providerType === 'rinkeby',
-        }),
-        h('span.network-name-item', {
-          style: {
-            color: providerType === 'rinkeby' ? '#ffffff' : '#9b9b9b',
-          },
-        }, this.context.t('rinkeby')),
+        }, this.context.t('classic')),
       ]
     ),
 
@@ -264,6 +242,10 @@ NetworkDropdown.prototype.getNetworkName = function () {
     name = this.context.t('kovan')
   } else if (providerName === 'rinkeby') {
     name = this.context.t('rinkeby')
+  } else if (providerName === 'expanse') {
+    name = this.context.t('expanse')
+  } else if (providerName === 'classic') {
+    name = this.context.t('classic')
   } else {
     name = this.context.t('unknownNetwork')
   }

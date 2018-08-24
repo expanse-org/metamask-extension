@@ -81,6 +81,12 @@ describe('Network utils', () => {
         input: 42,
         expected: 'Kovan',
       }, {
+        input: 61,
+        expected: 'Ethereum Classic',
+      }, {
+        input: 2,
+        expected: 'Expanse',
+      }, {
         input: 'ropsten',
         expected: 'Ropsten',
       }, {
@@ -92,7 +98,10 @@ describe('Network utils', () => {
       }, {
         input: 'mainnet',
         expected: 'Main Ethereum Network',
-      },
+      }, {
+        input: 'expanse',
+        expected: 'Expanse Network',
+      }
     ]
 
     tests.forEach(({ input, expected }) => assert.equal(getNetworkDisplayName(input), expected))

@@ -19,10 +19,12 @@ const {
   RINKEBY,
   KOVAN,
   MAINNET,
+  EXPANSE,
+  CLASSIC,
   LOCALHOST,
 } = require('./enums')
 const INFURA_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET]
-const ALL_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET]
+const ALL_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET, EXPANSE, CLASSIC]
 
 const env = process.env.METAMASK_ENV
 const METAMASK_DEBUG = process.env.METAMASK_DEBUG
@@ -180,6 +182,19 @@ module.exports = class NetworkController extends EventEmitter {
       ticker: 'ETH',
     }
     this.networkConfig.putState(settings)
+  }
+
+  _configurePredefinedProvider ({ type }) {
+    log.info('NetworkController - configurePredefinedProvider', type)
+    // setup networkConfig
+    var settings = {
+      network: networks.networkList[type].chainId,
+    }
+    settings = extend(settings, networks.networkList[type])
+    const rpcUrl = networks.networkList[type].rpcUrl
+    const networkClient = createJsonRpcClient({ rpcUrl })
+    this.networkConfig.putState(settings)
+    this._setNetworkClient(networkClient)
   }
 
   _configureLocalhostProvider () {
