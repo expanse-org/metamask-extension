@@ -239,9 +239,9 @@ module.exports = class AppBar extends Component {
           fontSize: '18px',
         },
       }, [
-        h('.menu-icon.diamond'),
+        h('.menu-icon.golden-square'),
         'Expanse Network',
-        providerType === 'mainnet'
+        providerType === 'expanse'
           ? h('.check', '✓')
           : null,
       ]),
