@@ -267,7 +267,7 @@ module.exports = class AppBar extends Component {
           fontSize: '18px',
         },
       }, [
-        h('.menu-icon.golden-square'),
+        h('.menu-icon.diamond'),
         'Ethereum Classic Network',
         providerType === 'classic'
           ? h('.check', '✓')
