@@ -274,7 +274,7 @@ function currentProviderDisplay (metamaskState) {
       value = 'Expanse Network'
       break
 
-    case 'classic'
+    case 'classic':
       title = 'Current Network'
       value = 'Ethereum Classic Network'
       break
