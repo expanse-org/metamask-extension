@@ -661,6 +661,12 @@
   "connectingToRinkeby": {
     "message": "Připojuji se k Rinkeby Test Network"
   },
+  "connectingToExpanse": {
+    "message": "Connecting to Expanse Network"
+  },
+  "connectingToClassic": {
+    "message": "Connecting to Classic Network"
+  },
   "connectingToUnknown": {
     "message": "Připojuji se k neznámé síti"
   },

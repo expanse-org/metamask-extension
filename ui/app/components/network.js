@@ -130,6 +130,25 @@ Network.prototype.render = function () {
               h('.network-name', context.t('rinkeby')),
               h('i.fa.fa-chevron-down.fa-lg.network-caret'),
             ])
+          case 'expanse-network':
+            return h('.network-indicator', [
+              h(NetworkDropdownIcon, {
+                backgroundColor: '#ebb33f', // $tulip-tree
+                nonSelectBackgroundColor: '#ecb23e',
+              }),
+              h('.network-name', context.t('expanse')),
+              h('i.fa.fa-chevron-down.fa-lg.network-caret'),
+            ])
+
+          case 'ethereum-classic-network':
+            return h('.network-indicator', [
+              h(NetworkDropdownIcon, {
+                backgroundColor: '#ebb33f', // $tulip-tree
+                nonSelectBackgroundColor: '#ecb23e',
+              }),
+              h('.network-name', context.t('classic')),
+              h('i.fa.fa-chevron-down.fa-lg.network-caret'),
+            ])
           default:
             return h('.network-indicator', [
               h('i.fa.fa-question-circle.fa-lg', {

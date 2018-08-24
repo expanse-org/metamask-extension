@@ -661,6 +661,12 @@
     "connectingToRinkeby": {
       "message": "Rinkeby Test Ağına bağlanıyor"
     },
+    "connectingToExpanse": {
+      "message": "Connecting to Expanse Network"
+    },
+    "connectingToClassic": {
+      "message": "Connecting to Classic Network"
+    },
     "connectingToUnknown": {
       "message": "Bilinmeyen Ağa bağlanıyor"
     },

@@ -661,6 +661,12 @@
   "connectingToRinkeby": {
     "message": "ரிங்கெப்ய டெஸ்ட் நெட்வொர்க்குடன் இணைக்கிறது"
   },
+  "connectingToExpanse": {
+    "message": "Connecting to Expanse Network"
+  },
+  "connectingToClassic": {
+    "message": "Connecting to Classic Network"
+  },
   "connectingToUnknown": {
     "message": "தெரியாத நெட்வொர்க்குடன் இணைக்கிறது"
   },

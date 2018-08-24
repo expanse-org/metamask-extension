@@ -658,6 +658,12 @@
   "connectingToUnknown": {
     "message": "Соединение с неизвестной сетью"
   },
+  "connectingToExpanse": {
+    "message": "Connecting to Expanse Network"
+  },
+  "connectingToClassic": {
+    "message": "Connecting to Classic Network"
+  },
   "sampleAccountName": {
     "message": "Например, Мой новый счет",
     "description": "Help user understand concept of adding a human-readable name to their account"

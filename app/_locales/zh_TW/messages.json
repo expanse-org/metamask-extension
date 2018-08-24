@@ -661,6 +661,12 @@
   "connectingToRinkeby": {
     "message": "連線到 Rinkeby 測試網路"
   },
+  "connectingToExpanse": {
+    "message": "Connecting to Expanse Network"
+  },
+  "connectingToClassic": {
+    "message": "Connecting to Classic Network"
+  },
   "connectingToUnknown": {
     "message": "連線到未知網路"
   },

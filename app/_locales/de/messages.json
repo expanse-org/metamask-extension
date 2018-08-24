@@ -649,6 +649,12 @@
   "connectingToRinkeby": {
     "message": " Verbinde zum Rinkeby Testnetzwerk"
   },
+  "connectingToExpanse": {
+    "message": "Connecting to Expanse Network"
+  },
+  "connectingToClassic": {
+    "message": "Connecting to Classic Network"
+  },
   "connectingToUnknown": {
     "message": "Verbinde zu einem unbekanntem Netzwerk"
   },
