@@ -162,6 +162,9 @@ module.exports = class NetworkController extends EventEmitter {
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     if (isInfura) {
       this._configureInfuraProvider(opts)
+    // other predefined endpoints
+    } else if (ALL_PROVIDER_TYPES.includes(type)){
+      this._configurePredefinedProvider(opts)
     // other type-based rpc endpoints
     } else if (type === LOCALHOST) {
       this._configureLocalhostProvider()
