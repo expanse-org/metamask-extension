@@ -100,7 +100,7 @@ describe('Network utils', () => {
         expected: 'Main Ethereum Network',
       }, {
         input: 'expanse',
-        expected: 'Expanse Network',
+        expected: 'Expanse',
       }, {
         input: 'classic',
         expected: 'Ethereum Classic',
