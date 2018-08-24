@@ -14,12 +14,10 @@ const RINKEBY_DISPLAY_NAME = 'Rinkeby'
 const KOVAN_DISPLAY_NAME = 'Kovan'
 const MAINNET_DISPLAY_NAME = 'Main Ethereum Network'
 
-//EXP
 const EXPANSE = 'expanse'
 const EXPANSE_CODE = 2
 const EXPANSE_DISPLAY_NAME = 'Expanse'
 
-//ETC
 const CLASSIC = 'classic'
 const CLASSIC_CODE = 61
 const CLASSIC_DISPLAY_NAME = 'Ethereum Classic'

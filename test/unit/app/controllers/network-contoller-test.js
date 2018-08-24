@@ -104,7 +104,7 @@ describe('Network utils', () => {
       }, {
         input: 'classic',
         expected: 'Ethereum Classic',
-      }
+      },
     ]
 
     tests.forEach(({ input, expected }) => assert.equal(getNetworkDisplayName(input), expected))

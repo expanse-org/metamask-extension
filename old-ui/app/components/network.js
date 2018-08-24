@@ -110,7 +110,7 @@ Network.prototype.render = function () {
               h('.network-name', {
                   style: {
                     color: '#e7a218',
-                  }
+                  },
                 },
                 'Rinkeby Test Net'),
               props.onClick && h('i.fa.fa-caret-down.fa-lg'),
@@ -121,7 +121,7 @@ Network.prototype.render = function () {
               h('.network-name', {
                   style: {
                     color: '#ff9900',
-                  }
+                  },
                 },
                 'Expanse Network'),
               props.onClick && h('i.fa.fa-caret-down.fa-lg'),
@@ -132,7 +132,7 @@ Network.prototype.render = function () {
               h('.network-name', {
                   style: {
                     color: '#267f00',
-                  }
+                  },
                 },
                 'Ethereum Classic Network'),
               props.onClick && h('i.fa.fa-caret-down.fa-lg'),
