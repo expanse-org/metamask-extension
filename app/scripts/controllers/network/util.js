@@ -28,6 +28,8 @@ const networkToNameMap = {
   [KOVAN_CODE]: KOVAN_DISPLAY_NAME,
   [EXPANSE]: EXPANSE_DISPLAY_NAME,
   [CLASSIC]: CLASSIC_DISPLAY_NAME,
+  [EXPANSE_CODE]: EXPANSE_DISPLAY_NAME,
+  [CLASSIC_CODE]: CLASSIC_DISPLAY_NAME,
 }
 
 const getNetworkDisplayName = key => networkToNameMap[key]
