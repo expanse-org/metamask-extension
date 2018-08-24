@@ -329,7 +329,7 @@
     "message": "Passwords Don't Match"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "View account on block explorer"
   },
   "exchangeRate": {
     "message": "Exchange Rate"
@@ -1166,7 +1166,7 @@
     "message": "View Account"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "View on block explorer"
   },
   "visitWebSite": {
     "message": "Visit our web site"
