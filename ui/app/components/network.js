@@ -82,6 +82,8 @@ Network.prototype.render = function () {
         'ropsten-test-network': providerName === 'ropsten' || parseInt(networkNumber) === 3,
         'kovan-test-network': providerName === 'kovan',
         'rinkeby-test-network': providerName === 'rinkeby',
+        'ethereum-classic-network': providerName === 'classic',
+        'expanse-network': providerName === 'expanse',
       }),
       title: hoverText,
       onClick: (event) => {

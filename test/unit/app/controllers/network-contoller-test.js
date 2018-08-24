@@ -101,6 +101,9 @@ describe('Network utils', () => {
       }, {
         input: 'expanse',
         expected: 'Expanse Network',
+      }, {
+        input: 'classic',
+        expected: 'Ethereum Classic',
       }
     ]
 
